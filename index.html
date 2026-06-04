@@ -130,6 +130,40 @@
   .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
+.trust-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: #0a0a09;
+}
+
+.trust-item {
+  padding: 28px 24px;
+  text-align: center;
+  border-right: 1px solid var(--border);
+}
+
+.trust-item:last-child {
+  border-right: none;
+}
+
+.trust-item strong {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 300;
+  color: var(--cream);
+  margin-bottom: 8px;
+}
+
+.trust-item span {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+ 
   @media (max-width: 900px) {
     nav { padding: 20px 24px; } .nav-links { display: none; }
     .hero { padding: 0 24px 60px; } section { padding: 80px 24px; }
@@ -137,6 +171,18 @@
     .work-card:first-child { grid-column: span 2; aspect-ratio: 4/3; }
     .pricing-grid, .included-grid { grid-template-columns: 1fr; }
     footer { flex-direction: column; gap: 16px; text-align: center; }
+   .trust-bar {
+  grid-template-columns: 1fr;
+}
+
+.trust-item {
+  border-right: none;
+  border-bottom: 1px solid var(--border);
+}
+
+.trust-item:last-child {
+  border-bottom: none;
+}
   }
 </style>
 </head>
@@ -159,13 +205,31 @@
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
   <p class="hero-eyebrow">✦ Web Design · Framer · Paramaribo</p>
-  <h1 class="hero-title">Your Website,<br><em>Our Craft.</em></h1>
-  <p class="hero-sub">We build clean, high-converting websites for small businesses — with WhatsApp booking, custom domains, and ongoing care built in.</p>
+  <h1 class="hero-title">Websites That Help<br><em>Businesses Grow.</em></h1>
+
+<p class="hero-sub">
+  Professional websites with WhatsApp booking, custom domains, and ongoing support — built for businesses in Suriname.
+</p>
   <div class="hero-cta">
     <a href="#pricing" class="btn-primary">View Packages →</a>
     <a href="#work" class="btn-ghost"><span>↓</span> See our work</a>
   </div>
   <div class="hero-scroll">Scroll to explore</div>
+</section>
+
+ <section class="trust-bar">
+  <div class="trust-item">
+    <strong>7-Day</strong>
+    <span>Average Launch Time</span>
+  </div>
+  <div class="trust-item">
+    <strong>24hr</strong>
+    <span>Response Time</span>
+  </div>
+  <div class="trust-item">
+    <strong>Suriname</strong>
+    <span>Small Business Focused</span>
+  </div>
 </section>
 
 <div class="marquee-wrap">
